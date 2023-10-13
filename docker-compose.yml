@@ -8,6 +8,8 @@ services:
       - "5900:5900"
       - "6081:6081"
       - "16530:16530"
+      - "5500:5500"
+      - "16340:16340"
     environment:
       - TZ=Asia/Shanghai
       - VNC_PASSWD=vncpasswd
