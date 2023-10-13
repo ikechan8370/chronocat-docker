@@ -33,8 +33,8 @@ RUN cd opt/noVNC/utils && git clone https://github.com/novnc/websockify.git
 RUN cp /opt/noVNC/vnc.html /opt/noVNC/index.html     
 
 # 安装Linux QQ
-RUN curl -o /root/linuxqq_3.1.2-13107_amd64.deb https://dldir1.qq.com/qqfile/qq/QQNT/ad5b5393/linuxqq_3.1.2-13107_amd64.deb
-RUN dpkg -i /root/linuxqq_3.1.2-13107_amd64.deb && apt-get -f install -y && rm /root/linuxqq_3.1.2-13107_amd64.deb
+RUN curl -o /root/linuxqq_3.2.1-17260_amd64.deb https://dldir1.qq.com/qqfile/qq/QQNT/5b1d2011/linuxqq_3.2.1-17260_amd64.deb
+RUN dpkg -i /root/linuxqq_3.2.1-17260_amd64.deb && apt-get -f install -y && rm /root/linuxqq_3.2.1-17260_amd64.deb
 
 # 安装LiteLoader
 RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.3/LiteLoaderQQNT.zip \
@@ -44,7 +44,7 @@ RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoa
 RUN sed -i 's/"main": ".\/app_launcher\/index.js"/"main": ".\/LiteLoader"/' /opt/QQ/resources/app/package.json
 
 # 安装chronocat  
-RUN curl -L -o /tmp/chronocat-llqqnt.zip https://ghproxy.com/https://github.com/chrononeko/chronocat/releases/download/v0.0.48/chronocat-llqqnt-v0.0.48.zip \
+RUN curl -L -o /tmp/chronocat-llqqnt.zip https://ghproxy.com/https://github.com/chrononeko/chronocat/releases/download/v0.0.52/chronocat-llqqnt-v0.0.52.zip \
   && mkdir -p /root/LiteLoaderQQNT/plugins \
   && unzip /tmp/chronocat-llqqnt.zip -d /root/LiteLoaderQQNT/plugins/ \
   && rm /tmp/chronocat-llqqnt.zip
